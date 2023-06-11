@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+.hero {
+  position: absolute;
+  width: 100%;
+  height: 640px;
+  left: 0px;
+  top: 0px;
+
+  background-color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.hero-image {
+  height: 640px;
+}
+
+.hero-image > img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  position: absolute;
+  width: 343px;
+  height: 24px;
+  left: 75px;
+  top: 16px;
+}
+
+.nav > li {
+  font-family: "iCiel Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.nav-item {
+  cursor: pointer;
+}
+
+.arrows > .arrow-left,
+.arrows > .arrow-right {
+  top: 356px;
+  background-repeat: no-repeat;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrows > .arrow-left:not(.enabled),
+.arrows > .arrow-right:not(.enabled) {
+  display: none;
+}
+
+.arrows > .arrow-left {
+  background-image: url("../static/images/arrow-left.png");
+  width: 55px;
+  height: 30px;
+  position: absolute;
+  left: 124px;
+}
+
+.arrows > .arrow-right {
+  background-image: url("../static/images/arrow-right.png");
+  width: 55px;
+  height: 30px;
+  position: absolute;
+  right: 124px;
+}
+
+.ellipse {
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 579px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}
+
+.ellipse.active {
+  background: #ffffff;
+}
+
+.ellipse1 {
+  left: 75px;
+}
+
+.ellipse2 {
+  left: 115px;
+}
+
+.ellipse.active {
+  background: #ffffff;
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 7%;
+  position: absolute;
+  width: 100%;
+  height: 650px;
+  left: 0px;
+  top: 640px;
+  background: linear-gradient(180deg, #d6f1fa 0%, #c5eaf7 100%);
+}
+
+.about-us > .content > h2 {
+  font-family: "ITC Garamond Std", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: -2px;
+  color: #222222;
+  width: 350px;
+  font-family: "Lora", serif;
+  margin-top: 60px;
+}
+
+.about-us > .content > p {
+  width: 350px;
+
+  font-family: "Lora", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #3f3f3f;
+  margin-bottom: 50px;
+}
+
+.about-us > .content {
+  position: relative;
+  left: 100px;
+  width: 300px;
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: anim 10s linear infinite;
+}
+.text p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Inter";
+  font-family: monospace;
+}
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+
+.models {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  height: 67%;
+  width: auto;
+  margin-top: 5%;
+  position: relative;
+}
+.bestsellers {
+  display: block;
+  position: relative;
+  top: 1290px;
+  margin-top: 80px;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-img-wrapper {
+  width: 300px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.card-img-wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+
+.bestseller-item {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  font-family: "iCiel Internacional", sans-serif;
+  background-color: #222222;
+  color: #ffffff;
+  border: 5px solid #222222;
+}
+
+.bestseller-item::before {
+  content: "Best seller";
+}
+.product-name {
+  font-family: "iCiel Internacional", "Tahoma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(34, 34, 34, 1);
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.product-price {
+  margin-top: 0;
+  color: rgba(132, 132, 132, 1);
+  font-family: "iCiel Internacional", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
